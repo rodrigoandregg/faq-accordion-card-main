@@ -113,12 +113,42 @@ footer {
 
 .attribution {
   width: 100%;
-  font-size: 11px;
+  font-size: 0.6rem;
   text-align: center;
+  font-weight: 700;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $accent;
+
+  &:hover {
+    color: $light;
+  }
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background-color: $light;
+  color: $accent;
+  font-size: 14px;
+  font-family: $main-font;
+  position: absolute;
+  padding: 3px 20px;
+  top: -2rem;
+  right: 10%;
+  white-space: nowrap;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 6px;
+}
+[data-title] {
+  position: relative;
 }
 
 @media (min-width: 768px) {
