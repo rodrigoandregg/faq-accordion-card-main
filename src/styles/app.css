@@ -193,8 +193,7 @@ body {
   align-items: center;
   width: 0.8rem;
   height: 0.8rem;
-  transform: rotate(0deg);
-  transition: transform 0.3s linear;
+  transition: all 0.3s linear;
 }
 .card__answer {
   color: #787887;
