@@ -9,11 +9,6 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
-*::before,
-*::after {
-  content: "";
-  display: block;
-}
 
 img,
 picture,
@@ -75,8 +70,8 @@ q:after {
 }
 
 ::selection {
-  background-color: var($dark);
-  color: var($light);
+  background-color: $dark;
+  color: $light;
 }
 
 form,

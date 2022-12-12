@@ -1,12 +1,162 @@
 @import "reset";
 @import "boxes";
 
+figure {
+  width: 2rem;
+}
+
+body {
+  background: $main-bg;
+  @include flexBox;
+}
+
+.card {
+  @include flexBox;
+  background: $light;
+  border-radius: 1.5rem;
+  margin: 10rem 1rem 3rem;
+  max-width: 22rem;
+  min-width: 21rem;
+
+  &__box {
+    background: url(../images/illustration-box-desktop.svg) no-repeat center;
+    background-size: contain;
+    width: 8rem;
+    height: 8rem;
+    left: -0.5rem;
+    top: 6rem;
+    position: absolute;
+    display: none;
+  }
+
+  &__div {
+    @include flexBox;
+    width: 100%;
+  }
+
+  &__section {
+    @include flexBox;
+    gap: 1rem;
+    padding: 0 1rem 1rem;
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: $dark;
+  }
+
+  &__div--accordion {
+    gap: 0.5rem;
+    border-bottom: 1px solid $divider;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  &__div--question {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__question {
+    width: 100%;
+    color: $question;
+    font-size: 0.8em;
+    transition: all 0.1s linear;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__icon {
+    @include flexBox;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: rotate(0deg);
+    transition: transform 0.3s linear;
+  }
+
+  &__answer {
+    color: $answer;
+    font-size: 0.8em;
+    width: 100%;
+    display: none;
+  }
+}
+
+.illustration {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin-top: -9rem;
+
+  &__woman {
+    background: url(../images/illustration-woman-online-mobile.svg) no-repeat
+      center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2rem 0 $shadow);
+  }
+}
+
 // footer
+footer {
+  @include flexBox;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .attribution {
+  width: 100%;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    max-width: 40rem;
+    position: relative;
+    padding: 2rem 3rem;
+    margin-top: 1rem;
+
+    &__box {
+      display: block;
+      left: -3.5rem;
+      top: 11.2rem;
+    }
+
+    &__title {
+      text-align: start;
+      width: 100%;
+    }
+  }
+
+  .illustration {
+    width: 40rem;
+    height: 20rem;
+
+    margin-top: 0;
+    margin-left: -3rem;
+    overflow: hidden;
+
+    &__woman {
+      background: url(../images/illustration-woman-online-desktop.svg) no-repeat
+        center;
+      background-size: contain;
+      margin-left: -6rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
