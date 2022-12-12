@@ -1,5 +1,5 @@
-@import "vars";
-
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*----colors----*/
 *,
 *::before,
 *::after {
@@ -9,6 +9,7 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
+
 *::before,
 *::after {
   content: "";
@@ -75,8 +76,8 @@ q:after {
 }
 
 ::selection {
-  background-color: var($dark);
-  color: var($light);
+  background-color: var(#101010);
+  color: var(#f5f5f5);
 }
 
 form,
@@ -111,6 +112,17 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: $main-font;
-  color: $dark;
+  font-family: "";
+  color: #101010;
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=app.css.map */
